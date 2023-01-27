@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo adivinha</title>
+</head>
+<body>
+    <h1> Joguinheee</h1>
+
+    <img src="Lari.jpg" id="foto" hidden>
+    <br>
+    <p id="frase" hidden> Seu premio</p>
+    <br>
+
+    
+
+    
+
+
+
+    <script>
+      var x = document.getElementById("foto")
+      var myfunction= function(){
+        document.getElementById("foto").removeAttribute('hidden')
+        document.getElementById("frase").removeAttribute('hidden')
+       
+
+
+    }
+   
+     var jump= function(){
+            document.write('<br>')
+     
+        }
+     var pula = function(frase) {
+           document.write('<big>')
+            document.write(frase)
+            document.write('</big>')
+            jump()
+        }
+    var numeropensado= Math.round(Math.random()*10)
+    var numeroDaTentativa = 1;
+        while(numeroDaTentativa <= 3 && chute!=numeropensado) {
+        var chute = prompt("Qual você acha que é?");
+        if(chute == numeropensado) {
+        alert("Parabéns, você acertou!");
+        
+        } else {
+            if(chute <numeropensado){
+                alert('um pouco maior')
+            }
+            if(chute>numeropensado){
+                alert('um pouco menor')
+            }
+        }
+        numeroDaTentativa++;
+}
+  
+
+    if(chute==numeropensado){
+
+        pula('Wow, parabéns, você acertou')
+        myfunction()
+    } else {
+        pula( 'Que pena, você errou')
+    }
+    jump()
+    if(chute> numeropensado){
+        pula('era um pouco menor')
+    }
+    if(chute< numeropensado){
+        pula('era um pouco maior')
+    }
+   
+    
+    if(isNaN(chute)){
+        alert('Eu pedi um numero grr')
+    }
+    jump()
+    pula("eu tinha pensado:"+numeropensado)
+    jump()
+    document.write('<button id="b1" hidden onclick="window.location.reload()" type="button">Tente denovo</button>')
+    document.write('<button id="b2" hidden onclick="window.location.reload()" type="button">Jogue denovo</button>')
+    
+    var myfunction2=function() {
+        if (chute==numeropensado){
+            document.getElementById("b2").removeAttribute('hidden')
+        }
+        else {
+            document.getElementById("b1").removeAttribute('hidden')
+        }
+    }
+     myfunction2()
+
+
+
+
+
+
+
+    </script>
+
+    
+
+
+
+
+</body>
+</html>

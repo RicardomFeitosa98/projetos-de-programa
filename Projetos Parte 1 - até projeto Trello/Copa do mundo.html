@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+    var ano=prompt('até que ano quer saber?')
+    var anoComoTexto = prompt("Informe o ano inicial");
+    var anoDeCopa = parseInt(anoComoTexto);
+
+    var pula = function(frase) {
+document.write(frase + "<br>");
+};
+
+    while(anoDeCopa <ano) {
+        anoDeCopa = anoDeCopa + 4;
+        if(anoDeCopa <= 2022) {
+            pula(anoDeCopa+'teve copa')
+        }
+        else {
+        pula(anoDeCopa + " tem copa!");
+        }
+    }
+
+    pula('esses foram os anos de copa até:'+ ano)
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

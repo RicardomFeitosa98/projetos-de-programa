@@ -1,0 +1,81 @@
+.botao {
+    height: 30px;
+    position: relative;
+    border: 3px rgb(85, 183, 201);
+    background-color: #ddd9ce;
+  }
+  .flexbox {
+  display: flex;
+  height: 800px;
+  flex-wrap: nowrap;
+  background-color: white;
+  }
+
+.flexbox > div {
+  background-color: rgb(85, 183, 201);
+  width: 300px;
+  height: 780px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  }
+  .mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #a42ff1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+  }
+  .mydiv2 {
+    position: absolute;
+    z-index: 9;
+    background-color: #a42ff1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+  }
+  .mydiv3 {
+    position: absolute;
+    z-index: 9;
+    background-color: #a42ff1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+  }
+  .mydiv4 {
+    position: absolute;
+    z-index: 9;
+    background-color: #a42ff1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+  }
+  .mydiv5 {
+    position: absolute;
+    z-index: 9;
+    background-color: #a42ff1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+  }
+  .mydiv6 {
+    position: absolute;
+    z-index: 9;
+    background-color: #a42ff1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+  }
+
+  .mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #a42ff1;
+    color: #fff;
+  }
+  textarea{
+      resize: none;
+      background-color: #fffafa;
+      color: #ddd9ce"
+  }
+  h1{
+    text-align: center;
+    color: black;
+  }

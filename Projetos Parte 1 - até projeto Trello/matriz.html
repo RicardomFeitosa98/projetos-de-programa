@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .botao {
+          height: 30px;
+          position: relative;
+          border: 3px rgb(85, 183, 201);
+          background-color: #ddd9ce;
+        }
+        .flexbox {
+        display: flex;
+        height: 800px;
+        flex-wrap: nowrap;
+        background-color: white;
+        }
+
+      .flexbox > div {
+        background-color: rgb(85, 183, 201);
+        width: 300px;
+        height: 780px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+        }
+        .mydiv {
+          position: absolute;
+          z-index: 9;
+          background-color: #a42ff1;
+          text-align: center;
+          border: 1px solid #d3d3d3;
+        }
+        .mydiv2 {
+          position: absolute;
+          z-index: 9;
+          background-color: #a42ff1;
+          text-align: center;
+          border: 1px solid #d3d3d3;
+        }
+        .mydiv3 {
+          position: absolute;
+          z-index: 9;
+          background-color: #a42ff1;
+          text-align: center;
+          border: 1px solid #d3d3d3;
+        }
+        .mydiv4 {
+          position: absolute;
+          z-index: 9;
+          background-color: #a42ff1;
+          text-align: center;
+          border: 1px solid #d3d3d3;
+        }
+        .mydiv5 {
+          position: absolute;
+          z-index: 9;
+          background-color: #a42ff1;
+          text-align: center;
+          border: 1px solid #d3d3d3;
+        }
+        .mydiv6 {
+          position: absolute;
+          z-index: 9;
+          background-color: #a42ff1;
+          text-align: center;
+          border: 1px solid #d3d3d3;
+        }
+    
+        .mydivheader {
+          padding: 10px;
+          cursor: move;
+          z-index: 10;
+          background-color: #a42ff1;
+          color: #fff;
+        }
+        textarea{
+            resize: none;
+            background-color: #fffafa;
+            color: #ddd9ce"
+        }
+        h1{
+          text-align: center;
+          color: black;
+        }
+      </style>
+    <div id="demo"></div>
+    <button  onclick="cria('mydiv','43')" class="botao" id="b1" type="button">Tarefas</button>
+
+<script>
+    var matrixMyClass = [ 
+            [null, null, null], 
+            [null, null, null], 
+            [null, null, null], 
+            [null, null, null], 
+            [null, null, null], 
+            [null, null, null] 
+        ] 
+
+      var  matrixpx = [
+          [43,350,665,974,1285,1595],
+          [43,350,665,974,1285,1595],
+          [43,350,665,974,1285,1595],
+      
+//43,185 350,185 665,185 974,185 1285,185 1595,185
+// 43,371 350,371 665,371 974,371 1285,371 1595,371
+//43,571 350,571 665,571 974,571 1285,571 1595,571
+      ]
+      var matrixpy = [
+         [185,185,185,185,185,185],
+         [371,371,371,371,371,371],
+         [571,571,571,571,571,571],
+     
+      ]
+      var  arrayx = [43,350,665,974,1285,1595]
+      var  arrayy  =[185,371,571]
+    
+      
+         
+        function shape_do_post_it(element) { 
+            return { 
+                xi: 43, 
+                xf: 250, 
+                yi: 80, 
+                yf: 290, 
+            } 
+        } 
+        var matrixpxy = [
+        [false,false,false,false,false,false],
+        [false,false,false,false,false,false],
+        [false,false,false,false,false,false],    
+        
+        ]
+  
+ 
+        var  criadiv= function(cname,pxy,pxx){
+          var text = document.createElement("div")
+	                text.className=cname
+                  text.style.left =pxx +'px'
+                  text.style.top =pxy +'px'
+	            var text1= document.createElement('textarea')
+	                text1.rows ='10'
+	                text1.cols ='30'
+	                text1.innerText='Escreva aqui'
+	                text.appendChild(text1)
+	            var text2=document.createElement('div')
+	                text2.className='mydivheader' 
+	                text.appendChild(text2)
+	                document.body.appendChild(text)
+                    matrixpxy[arrayy.indexOf(parseInt(pxy))][arrayx.indexOf(parseInt(pxx))] = true
+                  
+            
+             }
+        var cria =function(cname,positionx)  {
+          
+            if (document.getElementsByClassName(cname).length<1) {
+            criadiv(cname,185,positionx)
+            return
+                }
+            if (document.getElementsByClassName(cname).length == 1) {
+                criadiv(cname,371,positionx)
+                return
+            }
+            if (document.getElementsByClassName(cname).length == 2) {
+                criadiv(cname,571,positionx)
+            }
+         }
+       
+</script>    
+    
+</body>
+</html>

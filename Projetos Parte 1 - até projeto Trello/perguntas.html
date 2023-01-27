@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perguntas</title>
+</head>
+<body>
+
+
+
+
+    <script>
+ var calcula= function(altura, peso) {
+            var imc = peso / (altura * altura)
+            return imc.toFixed(2)
+             
+}
+   
+    var jump= function(){
+            document.write('<br>')
+     
+        }
+        var pula = function(frase) {
+           document.write('<big>')
+            document.write(frase)
+            document.write('</big>')
+            jump()
+        }
+var nome = prompt("Bom Dia! Qual é o seu nome?")
+document.write("Bem vindo, " + nome)
+document.write('<br>')
+
+var alturaDoUsuario = prompt('Qual é a sua altura?')
+
+var pesoDoUsuario = prompt("E o seu peso?")
+var imcDoUsuario= calcula(alturaDoUsuario,pesoDoUsuario)
+   pula(' o seu imc é' +(imcDoUsuario))
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

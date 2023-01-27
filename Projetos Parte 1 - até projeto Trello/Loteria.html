@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"  id="numero" />
+    <button id='adivinhar' type="button">Compare com o meu segredo</button>
+
+
+
+<script>
+var segredos = [16, 34, 37, 42, 50, 58]
+var caixaDoNumero = document.getElementById("numero")
+var botaoClicado = function() {
+for(var i = 0; i < segredos.length; i++) {
+if(segredos[i] == caixaDoNumero.value) {
+    
+    alert("Parabéns! Você acertou o "+ (i+1) +'º número secreto');
+  return;
+}
+}
+alert("Infelizmente você errou!");
+}
+var botaoAdivinhar = document.getElementById("adivinhar");
+botaoAdivinhar.onclick = botaoClicado;
+    
+</script>
+
+    
+</body>
+</html>

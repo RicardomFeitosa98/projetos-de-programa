@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batimentos</title>
+</head>
+<body>
+
+
+
+
+    <script>
+   var calcula= function(altura, peso) {
+            var imc = peso / (altura * altura)
+            return imc.toFixed(2)
+             
+        }
+   
+   var jump= function(){
+            document.write('<br>')
+     
+        }
+    var pula = function(frase) {
+           document.write('<big>')
+            document.write(frase)
+            document.write('</big>')
+            jump()
+        }
+    var idade=prompt('quantos anos você tem?')
+    var dias =(idade*365)
+    var batimentos=(dias*24*60*80)
+    pula('voce viveu:'+(dias)+('dias'))
+    pula('nesse tempo, seu coração bateu:'+(batimentos)+('vezes, eita porra'))
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

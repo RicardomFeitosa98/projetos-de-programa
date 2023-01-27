@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <input type="text" id="numero" />
+    <button id='adivinhar' type="button">Compare com o meu segredo</button>
+    <br>
+    <br>
+    <button id='verificar' type="button">Verifique as respostas</button>
+
+
+
+<script>
+
+
+    var segredos = [16, 34, 37, 42, 50, 58]
+    var acertos =0
+    var sorteados= []
+   
+    var adicionarSorteado = function() {
+        var numero = document.getElementById("numero").value;
+        for(var i = 0; i < sorteados.length; i = i + 1) {
+        if(sorteados[i] == numero) {
+        alert("Numero já sorteado!");
+        return;
+        }
+        
+        }
+        sorteados.push(numero);
+        console.log(sorteados);
+        if(sorteados.length.value==6){
+            alert('todas as respostas foram coletadas')
+        }
+        }
+        var VerificarNumeros = function () {
+          if(segredos[0,1,2,3,4,5]==sorteados[1,2,3,4,5]){
+
+            acertosu = acertos + 1
+          }
+          alert('você acertou '+ acertosu+ "numeros")
+
+        }
+       
+        var botaoAdivinhar = document.getElementById("adivinhar");
+            botaoAdivinhar.onclick = adicionarSorteado;
+            var Botão = document.getElementById("verificar");
+            Botão.onclick = VerificarNumeros;
+      
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+    
+</body>
+</html>

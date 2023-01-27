@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Joguinheee</h1>
+
+    <img src="Lari.jpg" id="foto" hidden>
+    <br>
+    <p id="frase" hidden> Seu premio</p>
+    <br>
+
+    
+
+    
+
+
+
+    <script>
+      var x = document.getElementById("foto")
+      var myfunction= function(){
+        document.getElementById("foto").removeAttribute('hidden')
+        document.getElementById("frase").removeAttribute('hidden')
+
+    }
+   
+     var jump= function(){
+            document.write('<br>')
+     
+        }
+     var pula = function(frase) {
+           document.write('<big>')
+            document.write(frase)
+            document.write('</big>')
+            jump()
+        }
+    var numeropensado= Math.round(Math.random()*10)
+    var chute= prompt('Adivinha, qual o numero? (0 a 10)')
+  
+
+    if(chute==numeropensado){
+
+        pula('Wow, parabéns, você acertou')
+        myfunction()
+    } else {
+        pula( 'Que pena, você errou')
+    }
+    jump()
+    if(chute> numeropensado){
+        pula('era um pouco menor')
+    }
+    if(chute< numeropensado){
+        pula('era um pouco maior')
+    }
+   
+    if(isNaN(chute)){
+        alert('Eu pedi um numero grr')
+    }
+    jump()
+    pula("eu tinha pensado:"+numeropensado)
+    
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <br>
+    <br>
+    <button onclick="window.location.reload()" type="button">Tente denovo</button>
+    <br>
+    <br>
+    
+
+
+
+
+</body>
+</html>

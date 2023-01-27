@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+
+var vitorias = prompt("Quantos jogos o CDC Futebol Clube venceu?")
+var empates = prompt("Quantos jogos o CDC Futebol Clube empatou?")
+var derrotas = prompt ('Quantos jogos nosso time perdeu?')
+var vitoriasadv= prompt('Quantos jogos o adversário venceu?')
+var empatesadv= prompt('quantos empates o adversário tem?')
+var derrotasadv= prompt('quantas derrotas o adv tem?')
+var calculapontos= function(vitorias,empates,derrotas){
+    var pontos = (vitorias * 3) + parseInt(empates) - parseInt(derrotas)
+    return pontos
+        }
+
+     var jump= function(){
+            document.write('<br>')
+     
+        }
+   
+     var pula = function(frase) {
+           document.write('<big>')
+            document.write(frase)
+            document.write('</big>')
+            jump()
+        }
+        pula("Nosso time tem " + calculapontos(vitorias,empates,derrotas) + " pontos!")
+        if(calculapontos(vitorias,empates,derrotas) > calculapontos(vitoriasadv,empatesadv,derrotasadv)) {
+pula("Nosso time está indo MELHOR que o Livros Velhos!");
+        }
+        if(calculapontos(vitorias,empates,derrotas)< calculapontos(vitoriasadv,empatesadv,derrotasadv)) {
+pula("Nosso time está indo PIOR que o Livros Velhos!");
+}
+        if(calculapontos(vitorias,empates,derrotas) == calculapontos(vitoriasadv,empatesadv,derrotasadv)) {
+pula("Nosso time está EMPATADO com o Livros Velhos!");
+}
+ pula( 'o time adiversário tem '+ calculapontos(vitoriasadv,empatesadv,derrotasadv)+ ' pontos')
+
+
+
+
+    </script>
+    
+</body>
+</html>

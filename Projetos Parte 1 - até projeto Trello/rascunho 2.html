@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rascunho 2</title>
+</head>
+<body>
+    <style>
+    
+        .mydiv {
+          position: absolute;
+          z-index: 9;
+          background-color: #f1f1f1;
+          text-align: center;
+          border: 1px solid #d3d3d3;
+        }
+    
+        .mydivheader {
+          padding: 10px;
+          cursor: move;
+          z-index: 10;
+          background-color: #2196f3;
+          color: #fff;
+        }
+        textarea{
+            resize: none;
+        }
+      </style>
+      <body>
+        <h1> Criador de postits</h1>
+    <br>
+    <h3> clique no botão para criar um novo postit</h3>
+    <br>
+    <button id="b1" type="button">seu novo postit</button>
+    <button id="b2" type="button">apaga =/</button>
+    <br>
+    <br>
+    
+        <script>
+
+
+        var cria =function()  {
+            var text = document.createElement("div")
+             text.className='mydiv'
+            var text1= document.createElement('textarea')
+                text1.rows ='10'
+                text1.cols ='30'
+                text1.innerText='seu postit alan ceasar'
+                text.appendChild(text1)
+            var text2=document.createElement('div')
+                 text2.className='mydivheader' 
+                text.appendChild(text2)
+            document.body.appendChild(text)
+            for (var i = 0; i < mydivs.length; i++) {
+            dragElement(mydivs[i]);
+            
+            }
+        }
+          var atrib= function(){
+       document.getElementsByClassName('mydiv')[0].remove()
+
+        }
+
+          var mydivs = document.getElementsByClassName("mydiv");
+              
+        function dragElement(elmnt) {
+            var pos1 = 0,
+              pos2 = 0,
+              pos3 = 0,
+              pos4 = 0;
+              elmnt.getElementsByClassName("mydivheader")[0].onmousedown = dragMouseDown;
+             
+            function dragMouseDown(e) {
+              e = e || window.event;
+              e.preventDefault();
+              pos3 = e.clientX;
+              pos4 = e.clientY;
+              document.onmouseup = closeDragElement;
+              
+              document.onmousemove = elementDrag;
+            }
+    
+            function elementDrag(e) {
+              e = e || window.event;
+              e.preventDefault();
+             
+              pos1 = pos3 - e.clientX;
+              pos2 = pos4 - e.clientY;
+              pos3 = e.clientX;
+              pos4 = e.clientY;
+              elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+              elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+            }
+    
+            function closeDragElement() {
+              document.onmouseup = null;
+              document.onmousemove = null;
+            }
+          }
+          var botao1 = document.getElementById("b1")
+            botao1.onclick = cria
+        var botao2 = document.getElementById('b2')
+            botao2.onclick =atrib
+
+
+
+        </script>
+    
+</body>
+</html>

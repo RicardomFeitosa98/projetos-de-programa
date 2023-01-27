@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidor de IMC</title>
+</head>
+<body>
+    <h1>Medidor de IMC</h1>
+
+
+
+    <script>
+
+    
+    
+     var  nome =prompt('bem vindo!qual seu nome?')     
+     var alturau=prompt('qual sua altura?')
+     var pesou=prompt('qual seu peso?')
+
+     var jump= function(){
+            document.write('<br>')
+     
+        }
+     var pula = function(frase) {
+           document.write('<big>')
+            document.write(frase)
+            document.write('</big>')
+            jump()
+        }
+
+    
+    var calcula= function(altura, peso) {
+            var imc = peso / (altura * altura)
+            return imc
+            
+             
+        }
+        
+    
+   
+       
+    
+
+     pula('seja bem vindo:'+ nome)
+     pula('seu imc é:'+ calcula(alturau,pesou).toFixed(2))
+     if (calcula(alturau,pesou).toFixed(2)<18.5){
+       pula('você está abaixo do peso ideal')
+     }
+     if (calcula(alturau,pesou).toFixed(2)>35) {
+       pula('você está acima do peso ideal')
+    }
+    if (calcula(alturau,pesou).toFixed(2) >= 18.5 && calcula(alturau,pesou).toFixed(2)<= 35) {
+     pula("OK! Seu IMC está entre os dois limites.");
+}
+     pula('Voce está '+ Math.round(calcula(alturau,pesou).toFixed(2) - 18.5) +' pontos acima do limiar de magreza')
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
